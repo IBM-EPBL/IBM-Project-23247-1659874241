@@ -1,0 +1,32 @@
+INTEGRATING CHATBOT TO HTML PAGE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initialscale=1.0">
+ <title>JOB RECOMMENDER</title>
+</head>
+<body>
+ <h1>Job Offer</h1>
+ <blockquote>Click the bottom right corner to 
+chat</blockquote>
+ <script>
+ window.watsonAssistantChatOptions = {
+ integrationID: "233cca96-da63-43e2-834f7c56853ab8b4", // The ID of this integration.
+ region: "jp-tok", // The region your integration is 
+hosted in.
+ serviceInstanceID: "43752fcc-0020-4425-ae87-
+127497c2f400", // The ID of your service instance.
+ onLoad: function (instance) { instance.render(); }
+ };
+ setTimeout(function () {
+ const t = document.createElement('script');
+ t.src = "https://webchat.global.assistant.watson.appdomain.cloud/versions/" + 
+(window.watsonAssistantChatOptions.clientVersion || 'latest') + 
+"/WatsonAssistantChatEntry.js";
+ document.head.appendChild(t);
+ });
+ </script>
+</body>
+</html>
